@@ -24,20 +24,16 @@ const updateValue = (e) => {
 };
 
 // On vérifie si notre vidéo est terminée
-video.addEventListener("ended", () =>{
-    btnPlay.innerHTML = "Play";
-})
+video.addEventListener("ended", () => {
+  btnPlay.innerHTML = "Play";
+});
+
+video.addEventListener("loadeddata", (e) => {
+  console.log("Votre vidéo a bien été chargé.");
+});
 
 //  Au chargement de la page on vérifie si notre vidéo s'est bien chargée
-window.addEventListener("load", () =>{
-    if ( video.readyState == 4 ) {
-        console.log("[Finished] Your video is ready");
-    }else{
-        let p = document.createElement("p");
-        p.innerText = "Votre vidéo n'a pas été chargé, la source ne fonctionne pas.";
-        let main = document.querySelector("main");
-        main.appendChild(p);
-    }
-})
+
+/*  ; */
 
 speed.addEventListener("input", updateValue);
