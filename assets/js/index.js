@@ -28,7 +28,7 @@ video.addEventListener("ended", () =>{
     btnPlay.innerHTML = "Play";
 })
 
-//  Au chargement de la page on vérifie si notre vidé s'est bien chargée
+//  Au chargement de la page on vérifie si notre vidéo s'est bien chargée
 window.addEventListener("load", () =>{
     if ( video.readyState == 4 ) {
         console.log("[Finished] Your video is ready");
